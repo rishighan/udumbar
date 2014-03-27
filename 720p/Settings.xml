@@ -9,9 +9,9 @@
 		<include>GlobalBackground</include>
 
 		<control type="list" id="9000">
-			<posx>520</posx>
+			<posx>0</posx>
 			<posy>108</posy>
-			<width>240</width>
+			<width>980</width>
 			<height>644</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
@@ -19,17 +19,12 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout width="240" height="46">
 
-				<control type="image">
-					<width>240</width>
-					<height>44</height>
-					<texture border="2">other_textures/ButtonNF.png</texture>
-				</control>
 
 				<control type="label">
 					<posx>120</posx>
 					<width>200</width>
 					<font>Medium</font>
-					<align>center</align>
+					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 
@@ -37,17 +32,13 @@
 
 			<focusedlayout width="240" height="46">
 
-				<control type="image">
-					<width>240</width>
-					<height>44</height>
-					<texture border="5">other_textures/ButtonFo.png</texture>
-				</control>
+
 
 				<control type="label">
 					<posx>120</posx>
 					<width>200</width>
-					<font>Medium</font>
-					<align>center</align>
+					<font>Large</font>
+					<align>left</align>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 

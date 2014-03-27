@@ -10,7 +10,7 @@
 
 		<control type="wraplist" id="300">
 			<description>Home Wraplist</description>
-			<posx>0</posx>
+			<posx>-560</posx>
 			<posy>72</posy>
 			<width>1280</width>
 			<height>564</height>
@@ -29,7 +29,7 @@
 					<width>250</width>
 					<font>Medium</font>
 					<info>ListItem.Label</info>
-					<align>center</align>
+					<align>left</align>
 				</control>
 
 			</itemlayout>
@@ -43,7 +43,7 @@
 					<info>ListItem.Label</info>
 					<font>Home</font>
 					<textcolor>Blue</textcolor>
-					<align>center</align>
+					<align>left</align>
 				</control>
 
 			</focusedlayout>
@@ -89,9 +89,9 @@
 				</item>
 
 				<item id="7">
-					<description>Favourites</description>
+					<description>Favorites</description>
 					<label>31008</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
+					<onclick>ActivateWindow(Favorites)</onclick>
 				</item>
 
 				<item id="8">
@@ -138,7 +138,7 @@
 		<control type="rss">
 			<description>RSS Feed</description>
 			<posx>0</posx>
-			<posy>690</posy>
+			<posy>0</posy>
 			<width>1280</width>
 			<height>14</height>
 			<font>Small</font>
