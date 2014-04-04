@@ -22,15 +22,7 @@
 			<scrolltime>200</scrolltime>
 
 			<itemlayout width="360" height="50">
-				<control type="image" width="84" height="84">
-					<posx>10</posx>
-					<posy>10</posy>
-					<height>84</height>
-					<font>Medium</font>
-					<texture>icons/popcorn.png</texture>
-					<align>left</align>
-					<visible>true</visible>
-				</control>
+
 
 				<control type="label">
 					<posx>640</posx>
@@ -39,6 +31,8 @@
 					<font>Medium</font>
 					<info>ListItem.Label</info>
 					<align>left</align>
+					<icon>-</icon>
+					<thumb>-</thumb>
 				</control>
 
 
@@ -46,16 +40,7 @@
 			</itemlayout>
 
 			<focusedlayout width="540" height="64">
-				<control type="image" width="84" height="84">
-					<posx>0</posx>
-					<posy>0</posy>
-					<height>84</height>
-					<width>84</width>
-					<font>Medium</font>
-					<texture>icons/popcorn.png</texture>
-					<align>left</align>
-					<visible>true</visible>
-				</control>
+
 
 				<control type="label">
 					<posx>640</posx>
@@ -65,6 +50,8 @@
 					<font>Home</font>
 					<textcolor>Blue</textcolor>
 					<align>left</align>
+					<icon>icons/popcorn.png</icon>
+					<thumb>icons/popcorn.png</thumb>
 				</control>
 
 			</focusedlayout>
@@ -72,10 +59,12 @@
 			<content>
 
 				<item id="1">
-					<texture>icons/popcorn.png</texture>
+
 					<description>Programs</description>
 					<label>31002</label>
 					<onclick>ActivateWindow(Programs,Addons)</onclick>
+					<icon>icons/popcorn.png</icon>
+					<thumb>icons/popcorn.png</thumb>
 				</item>
 
 				<item id="2">
