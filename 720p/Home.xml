@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
+<!-- LITEGRAY = 0xFFBFBFBF
+ 	 RED = 0xFF0000FF,
+     GREEN =  0xFF00FF00,
+     BLUE =   0xFFFF0000,
+     WHITE = 0xFFFFFFFF,
+     LITEGRAY = 0xFFBFBFBF,
+     GRAY =  0xFF7F7F7F,
+     DARKGRAY = 0xFF3F3F3F,
+     BLACK = 0xFF000000,
+
+
+-->
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
+	 <backgroundcolor>0xFF3F3F3F</backgroundcolor>
 	<controls>
 
 		<include>GlobalBackground</include>
+		<!-- Here goes the list -->
+
+		<control type="wraplist">
+
+		</control>
 
 		<control type="label">
-			<posx>80</posx>
+			<posx>240</posx>
 			<posy>90</posy>
 			<width>650</width>
 			<height>30</height>
@@ -19,8 +36,8 @@
 		<control type="image">
 			<posx>80</posx>
 			<posy>30</posy>
-			<width>84</width>
-			<height>84</height>
+			<width>90</width>
+			<height>90</height>
 			<visible>true</visible>
 			<texture>icons/earphones.png</texture>
 		</control>
