@@ -22,6 +22,44 @@
 		<!-- Here goes the list -->
 
 		<control type="wraplist">
+			<itemlayout width="650" height="90">
+				<control type="image">
+					<posx>80</posx>
+					<posy>30</posy>
+					<width>90</width>
+					<height>90</height>
+					<texture>-</texture>
+				</control>
+
+				<control type="label">
+					<posx>240</posx>
+					<posy>90</posy>
+					<width>650</width>
+					<height>30</height>
+					<label>-/label>
+			 	</control>
+			</itemlayout>
+
+			<focusedlayout width="650" height="90">
+				<control type="image">
+					<posx>80</posx>
+					<posy>30</posy>
+					<width>90</width>
+					<height>90</height>
+					<texture>-</texture>
+				</control>
+
+				<control type="label">
+					<posx>240</posx>
+					<posy>90</posy>
+					<width>650</width>
+					<height>30</height>
+					<selectedcolor>home</selectedcolor>
+					<label>-</label>
+			 	</control>
+			</focusedlayout>
+
+
 
 		</control>
 
