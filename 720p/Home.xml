@@ -21,7 +21,7 @@
 		<include>GlobalBackground</include>
 		<!-- Here goes the list -->
 
-		<control type="wraplist">
+		<control type="wraplist" id="300">
 			<itemlayout width="650" height="90">
 				<control type="image">
 					<posx>80</posx>
@@ -36,7 +36,7 @@
 					<posy>90</posy>
 					<width>650</width>
 					<height>30</height>
-					<label>-/label>
+					<label>-</label>
 			 	</control>
 			</itemlayout>
 
@@ -51,7 +51,7 @@
 
 				<control type="label">
 					<posx>240</posx>
-					<posy>90</posy>
+					<posy>0</posy>
 					<width>650</width>
 					<height>30</height>
 					<selectedcolor>home</selectedcolor>

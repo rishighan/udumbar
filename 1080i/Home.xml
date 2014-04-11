@@ -3,137 +3,112 @@
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-
+	<backgroundcolor>0xFF3F3F3F</backgroundcolor>
 	<controls>
 
 		<include>GlobalBackground</include>
 
-		<control type="wraplist" id="300">
-			<description>Home Wraplist</description>
-			<posx>0</posx>
-			<posy>108</posy>
-			<width>1920</width>
-			<height>846</height>
-			<onup>300</onup>
-			<ondown>300</ondown>
-			<onleft>300</onleft>
-			<onright>300</onright>
-			<focusposition>5</focusposition>
-			<scrolltime>200</scrolltime>
 
-			<itemlayout width="540" height="75">
-
+			<control type="wraplist" id="50">
+				<onup>1</onup>
+				<ondown>2</ondown>
+				<onleft>1</onleft>
+				<onright>1</onright>
+				<orientation>vertical</orientation>
+				<pagecontrol>25</pagecontrol>
+				<height>90</height>
+				<itemlayout width="650" height="90">
+			      <viewtype label="3D list">list</viewtype>
 				<control type="label">
-					<posx>960</posx>
+					<posx>80</posx>
+					<posy>-</posy>
 					<height>75</height>
 					<width>375</width>
-					<font>Medium</font>
-					<info>ListItem.Label</info>
-					<align>center</align>
+					<font>Thin</font>
+					<textcolor>white</textcolor>
+					<label>ListItem.label</label>
+					<align>left</align>
 				</control>
 
-			</itemlayout>
+				<control type="image">
+					<posx>80</posx>
+					<posy>30</posy>
+					<width>90</width>
+					<height>90</height>
+					<visible>true</visible>
+					<texture>icons/earphones.png</texture>
+				</control>
 
-			<focusedlayout width="810" height="96">
+				</itemlayout>
+
+				<focusedlayout width="650" height="90">
+				<control type="label">
+					<posx>80</posx>
+					<posy>-</posy>
+					<height>75</height>
+					<width>375</width>
+					<font>Thin</font>
+					<textcolor>red</textcolor>
+					<label>ListItem.label</label>
+					<align>left</align>
+				</control>
+
+				<control type="image">
+					<posx>80</posx>
+					<posy>30</posy>
+					<width>200</width>
+					<height>200</height>
+
+					<texture>icons/earphones.png</texture>
+				</control>
+				</focusedlayout>
+
+
+
+
+			</control>
 
 				<control type="label">
-					<posx>960</posx>
-					<width>810</width>
-					<height>96</height>
-					<info>ListItem.Label</info>
-					<font>Home</font>
-					<textcolor>Blue</textcolor>
-					<align>center</align>
+					<posx>200</posx>
+					<posy>40</posy>
+					<height>75</height>
+					<width>375</width>
+					<font>Thin</font>
+					<label>MOVIES</label>
+					<align>left</align>
 				</control>
 
-			</focusedlayout>
+				<control type="image">
+					<posx>80</posx>
+					<posy>30</posy>
+					<width>100</width>
+					<height>100</height>
 
-			<content>
+					<texture>icons/popcorn.png</texture>
+				</control>
 
-				<item id="1">
-					<description>Programs</description>
-					<label>31002</label>
-					<onclick>ActivateWindow(Programs,Addons)</onclick>
-				</item>
 
-				<item id="2">
-					<description>Videos</description>
-					<label>31003</label>
-					<onclick>ActivateWindow(Video,Files)</onclick>
-				</item>
 
-				<item id="3">
-					<description>Music</description>
-					<label>31004</label>
-					<onclick>ActivateWindow(Music)</onclick>
-				</item>
+				<control type="label">
+					<posx>200</posx>
+					<posy>160</posy>
+					<height>75</height>
+					<width>375</width>
+					<font>Thin</font>
 
-				<item id="4">
-					<description>Pictures</description>
-					<label>31005</label>
-					<onclick>ActivateWindow(Pictures)</onclick>
-				</item>
+					<label>MUSIC</label>
+					<align>left</align>
+				</control>
 
-				<item id="5">
-					<description>Movies</description>
-					<label>31006</label>
-					<onclick>ActivateWindow(Video,movietitles)</onclick>
-					<visible>Library.HasContent(Movies)</visible>
-				</item>
+				<control type="image">
+					<posx>80</posx>
+					<posy>160</posy>
+					<width>100</width>
+					<height>100</height>
+					<visible>true</visible>
+					<texture>icons/earphones.png</texture>
+				</control>
 
-				<item id="6">
-					<description>TV Shows</description>
-					<label>31007</label>
-					<onclick>ActivateWindow(Video,tvshowtitles)</onclick>
-					<visible>Library.HasContent(TVShows)</visible>
-				</item>
-
-				<item id="7">
-					<description>Favourites</description>
-					<label>31008</label>
-					<onclick>ActivateWindow(Favourites)</onclick>
-				</item>
-
-				<item id="8">
-					<description>Profiles</description>
-					<label>31009</label>
-					<onclick>ActivateWindow(Profiles)</onclick>
-				</item>
-
-				<item id="9">
-					<description>Weather</description>
-					<label>31010</label>
-					<onclick>ActivateWindow(weather)</onclick>
-				</item>
-
-				<item id="10">
-					<description>File manager</description>
-					<label>31011</label>
-					<onclick>ActivateWindow(filemanager)</onclick>
-				</item>
-
-				<item id="11">
-					<description>Settings</description>
-					<label>31012</label>
-					<onclick>ActivateWindow(settings)</onclick>
-				</item>
-
-				<item id="12">
-					<description>Shutdown</description>
-					<label>31013</label>
-					<onclick>ActivateWindow(shutdownmenu)</onclick>
-				</item>
-
-				<item id="13">
-					<description>Play Disc</description>
-					<label>31014</label>
-					<onclick>PlayDVD</onclick>
-					<visible>System.HasMediadvd</visible>
-				</item>
-
-			</content>
-
-		</control>
 
 		<control type="rss">
 			<description>RSS Feed</description>

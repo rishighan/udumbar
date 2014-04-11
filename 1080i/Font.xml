@@ -4,33 +4,33 @@
 	<fontset id="default" unicode="true">
 
 		<font>
-			<name>Home</name>
-			<filename>Neou-Thin.ttf</filename>
-			<size>96</size>
+			<name>Thin</name>
+			<filename>Gotham Thin.ttf</filename>
+			<size>56</size>
 		</font>
 
 		<font>
 			<name>Large</name>
-			<filename>Neou-Thin.ttf</filename>
+			<filename>AvenirLTStd-Light.otf</filename>
 			<size>48</size>
 		</font>
 
 		<font>
 			<name>Medium</name>
-			<filename>Neou-Thin.ttf</filename>
+			<filename>AvenirLTStd-Light.otf</filename>
 			<size>39</size>
 		</font>
 
 		<font>
 			<name>Small</name>
-			<filename>Neou-Thin.ttf</filename>
+			<filename>AvenirLTStd-Light.otf</filename>
 			<size>30</size>
 		</font>
 
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
-			<filename>Neou-Thin.ttf</filename>
+			<filename>AvenirLTStd-Light.otf</filename>
 			<size>30</size>
 		</font>
 
