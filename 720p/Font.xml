@@ -22,6 +22,12 @@
 		</font>
 
 		<font>
+			<name>XLarge</name>
+			<filename>AvenirLTStd-Light.otf</filename>
+			<size>98</size>
+		</font>
+
+		<font>
 			<name>Small</name>
 			<filename>Neou-Thin.ttf</filename>
 			<size>30</size>

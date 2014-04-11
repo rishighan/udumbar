@@ -16,8 +16,14 @@
 		</font>
 
 		<font>
+			<name>XLarge</name>
+			<filename>Gotham Thin.ttf</filename>
+			<size>98</size>
+		</font>
+
+		<font>
 			<name>Medium</name>
-			<filename>AvenirLTStd-Light.otf</filename>
+			<filename>Gotham Thin.ttf</filename>
 			<size>39</size>
 		</font>
 

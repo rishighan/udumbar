@@ -8,119 +8,87 @@
 
 		<include>GlobalBackground</include>
 
+		<control type="wraplist" id="300">
+			<description>Home Wraplist</description>
+			<posx>0</posx>
+			<posy>72</posy>
+			<width>680</width>
+			<height>364</height>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>300</onleft>
+			<onright>300</onright>
+			<focusposition>5</focusposition>
+			<scrolltime>200</scrolltime>
 
-			<control type="wraplist" id="50">
-				<onup>1</onup>
-				<ondown>2</ondown>
-				<onleft>1</onleft>
-				<onright>1</onright>
-				<orientation>vertical</orientation>
-				<pagecontrol>25</pagecontrol>
-				<height>90</height>
-				<itemlayout width="650" height="90">
-			      <viewtype label="3D list">list</viewtype>
-				<control type="label">
-					<posx>80</posx>
-					<posy>-</posy>
-					<height>75</height>
-					<width>375</width>
-					<font>Thin</font>
-					<textcolor>white</textcolor>
-					<label>ListItem.label</label>
-					<align>left</align>
-				</control>
+	        <itemlayout width="650" height="120">
+	        	<control type="image">
+	        		<info>$INFO[LisItem.Icon]</info>
+	        		<width>180</width>
+	        		<posx>10</posx>
+	        		<posy>30</posy>
+	        	</control>
 
-				<control type="image">
-					<posx>80</posx>
-					<posy>30</posy>
-					<width>90</width>
-					<height>90</height>
-					<visible>true</visible>
-					<texture>icons/earphones.png</texture>
-				</control>
+	        	<control type="label">
+	        		<height>90</height>
+	        		<posx>200</posx>
+	        		<posy></posy>
+	        		<info>ListItem.Label</info>
+	        		<font>XLarge</font>
+	        		<textcolor>white</textcolor>
+	        	</control>
+	        </itemlayout>
 
-				</itemlayout>
+	        <focusedlayout width="650" height="120">
+	        	<control type="image">
+	        		<info>$INFO[LisItem.Icon]</info>
+	        		<width>180</width>
 
-				<focusedlayout width="650" height="90">
-				<control type="label">
-					<posx>80</posx>
-					<posy>-</posy>
-					<height>75</height>
-					<width>375</width>
-					<font>Thin</font>
-					<textcolor>red</textcolor>
-					<label>ListItem.label</label>
-					<align>left</align>
-				</control>
+	        		<posx>10</posx>
+	        		<posy>30</posy>
+	        	</control>
 
-				<control type="image">
-					<posx>80</posx>
-					<posy>30</posy>
-					<width>200</width>
-					<height>200</height>
+	        	<control type="label">
+	        		<height>90</height>
+	        		<posx>200</posx>
+	        		<posy></posy>
+	        		<info>ListItem.Label</info>
+	        		<font>XLarge</font>
+	        		<textcolor>red</textcolor>
+	        	</control>
 
-					<texture>icons/earphones.png</texture>
-				</control>
-				</focusedlayout>
+	        </focusedlayout>
 
+	     <content>
+	     	<item id="1">
+	     		<description>Movies</description>
+	     		<label>31006</label>
+	     		<thumb>pictures.png</thumb>
+	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
+	     	</item>
 
+	     	<item id="2">
+	     		<description>Music</description>
+	     		<label>31004</label>
+	     		<icon>icons/earphones.png</icon>
+	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
+	     	</item>
 
-
-			</control>
-
-				<control type="label">
-					<posx>200</posx>
-					<posy>40</posy>
-					<height>75</height>
-					<width>375</width>
-					<font>Thin</font>
-					<label>MOVIES</label>
-					<align>left</align>
-				</control>
-
-				<control type="image">
-					<posx>80</posx>
-					<posy>30</posy>
-					<width>100</width>
-					<height>100</height>
-
-					<texture>icons/popcorn.png</texture>
-				</control>
-
-
-
-				<control type="label">
-					<posx>200</posx>
-					<posy>160</posy>
-					<height>75</height>
-					<width>375</width>
-					<font>Thin</font>
-
-					<label>MUSIC</label>
-					<align>left</align>
-				</control>
-
-				<control type="image">
-					<posx>80</posx>
-					<posy>160</posy>
-					<width>100</width>
-					<height>100</height>
-					<visible>true</visible>
-					<texture>icons/earphones.png</texture>
-				</control>
+	    </content>
+		</control>   <!-- end wraplist -->
 
 
 		<control type="rss">
 			<description>RSS Feed</description>
 			<posx>0</posx>
-			<posy>1035</posy>
+			<posy>1015</posy>
 			<width>1920</width>
 			<height>21</height>
-			<font>Small</font>
+			<font>Thin</font>
 			<urlset>1</urlset>
 			<titlecolor>Red</titlecolor>
-			<headlinecolor>White</headlinecolor>
-			<textcolor>White</textcolor>
+			<headlinecolor>black</headlinecolor>
+			<textcolor>Black</textcolor>
 		</control>
 
 	</controls>
