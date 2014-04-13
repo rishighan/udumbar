@@ -13,48 +13,53 @@
 			<posx>0</posx>
 			<posy>72</posy>
 			<width>680</width>
-			<height>364</height>
+			<height>190</height>
 			<onup>300</onup>
 			<ondown>300</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<focusposition>5</focusposition>
 			<scrolltime>200</scrolltime>
+			<autoscroll>false</autoscroll>
 
-	        <itemlayout width="650" height="120">
+	        <itemlayout width="650" height="190">
 	        	<control type="image">
-	        		<info>$INFO[LisItem.Icon]</info>
+	        		<texture>$INFO[ListItem.Icon]</texture>
 	        		<width>180</width>
-	        		<posx>10</posx>
-	        		<posy>30</posy>
+	        		<height>180</height>
+	        		<posx>90</posx>
+	        		<posy>0</posy>
 	        	</control>
 
 	        	<control type="label">
+	        		<posx>250</posx>
+	        		<posy>50</posy>
 	        		<height>90</height>
-	        		<posx>200</posx>
-	        		<posy></posy>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
 	        		<textcolor>white</textcolor>
+	        		<align>left</align>
 	        	</control>
 	        </itemlayout>
 
-	        <focusedlayout width="650" height="120">
+	        <focusedlayout width="650" height="190">
 	        	<control type="image">
-	        		<info>$INFO[LisItem.Icon]</info>
+	        		<texture>$INFO[ListItem.Icon]</texture>
+	        		<height>180</height>
 	        		<width>180</width>
-
 	        		<posx>10</posx>
-	        		<posy>30</posy>
+	        		<posy>0</posy>
 	        	</control>
 
 	        	<control type="label">
+	        		<posx>250</posx>
+	        		<posy>50</posy>
 	        		<height>90</height>
-	        		<posx>200</posx>
-	        		<posy></posy>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
 	        		<textcolor>red</textcolor>
+	        		<align>left</align>
+
 	        	</control>
 
 	        </focusedlayout>
@@ -63,7 +68,7 @@
 	     	<item id="1">
 	     		<description>Movies</description>
 	     		<label>31006</label>
-	     		<thumb>pictures.png</thumb>
+	     		<icon>icons/popcorn.png</icon>
 	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
 	     	</item>
 
@@ -72,6 +77,13 @@
 	     		<label>31004</label>
 	     		<icon>icons/earphones.png</icon>
 	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
+	     	</item>
+
+	     	<item id="3">
+	     		<description>Settings</description>
+	     		<label>13000</label>
+	     		<icon>icons/earphones.png</icon>
+	     		<onclick>ActivateWindow(Settings)</onclick>
 	     	</item>
 
 	    </content>
