@@ -18,7 +18,7 @@
 			<ondown>300</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
-			<focusposition>5</focusposition>
+			<focusposition>3</focusposition>
 			<scrolltime>200</scrolltime>
 			<autoscroll>false</autoscroll>
 
@@ -47,7 +47,7 @@
 	        		<texture>$INFO[ListItem.Icon]</texture>
 	        		<height>180</height>
 	        		<width>180</width>
-	        		<posx>10</posx>
+	        		<posx>90</posx>
 	        		<posy>0</posy>
 	        	</control>
 
@@ -57,7 +57,7 @@
 	        		<height>90</height>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
-	        		<textcolor>red</textcolor>
+	        		<textcolor>green</textcolor>
 	        		<align>left</align>
 
 	        	</control>
@@ -76,7 +76,7 @@
 	     		<description>Music</description>
 	     		<label>31004</label>
 	     		<icon>icons/earphones.png</icon>
-	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
+	     		<onclick>ActivateWindow(Music)</onclick>
 	     	</item>
 
 	     	<item id="3">
