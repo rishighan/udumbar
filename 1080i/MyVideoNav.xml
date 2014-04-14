@@ -26,6 +26,7 @@
 			<onright>50</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
+			<font>Thin</font>
 			<orientation>vertical</orientation>
 			<animation type="Conditional" condition="!ControlGroup(9000).HasFocus()">
 				<effect type="fade" start="100" end="50" time="200" />
@@ -36,12 +37,14 @@
 				<description>View</description>
 				<width>330</width>
 				<align>left</align>
+				<font>Thin</font>
 			</control>
 
 			<control type="button" id="3">
 				<description>Sort</description>
 				<width>330</width>
 				<align>left</align>
+				<font>Thin</font>
 			</control>
 
 			<control type="togglebutton" id="4">
@@ -50,6 +53,7 @@
 				<align>left</align>
 				<label>584</label>
 				<altlabel>585</altlabel>
+				<font>Thin</font>
 			</control>
 
 			<control type="button" id="5">

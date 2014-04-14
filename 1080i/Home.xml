@@ -57,7 +57,7 @@
 	        		<height>90</height>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
-	        		<textcolor>green</textcolor>
+	        		<selectedcolor>red</selectedcolor>
 	        		<align>left</align>
 
 	        	</control>

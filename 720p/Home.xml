@@ -54,7 +54,7 @@
 					<posy>0</posy>
 					<width>650</width>
 					<height>30</height>
-					<selectedcolor>home</selectedcolor>
+					<selectedcolor>red</selectedcolor>
 					<label>-</label>
 			 	</control>
 			</focusedlayout>
