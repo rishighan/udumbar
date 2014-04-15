@@ -18,6 +18,7 @@
 			<ondown>300</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
+			<setfocus></setfocus>
 			<focusposition>3</focusposition>
 			<scrolltime>200</scrolltime>
 			<autoscroll>false</autoscroll>
@@ -70,6 +71,7 @@
 	     		<label>31006</label>
 	     		<icon>icons/popcorn.png</icon>
 	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
+
 	     	</item>
 
 	     	<item id="2">
@@ -88,6 +90,14 @@
 
 	    </content>
 		</control>   <!-- end wraplist -->
+
+	<!-- Background texture for the movie menu item control -->
+		<control type="image">
+		  <width>1280</width>
+		  <visible>Container(300).HasFocus(1)</visible>
+		  <texture>unnamed.png</texture>
+		  <colordiffuse>FFFFFFF</colordiffuse>
+		</control>
 
 
 		<control type="rss">
