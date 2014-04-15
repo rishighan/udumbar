@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+<!-- Foundation, modded -->
 <window id="0">
 	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
@@ -92,11 +92,11 @@
 		</control>   <!-- end wraplist -->
 
 	<!-- Background texture for the movie menu item control -->
-		<control type="image">
-		  <width>1280</width>
+		<control type="image" description="movie fanart">
+		  <animation effect="fade" time="600">VisibleChange</animation>
 		  <visible>Container(300).HasFocus(1)</visible>
-		  <texture>unnamed.png</texture>
-		  <colordiffuse>FFFFFFF</colordiffuse>
+		  <texture background="true">$INFO[Window.Property(LatestMovie.2.Fanart)]</texture>
+		  <colordiffuse>FFFCCCC</colordiffuse>
 		</control>
 
 
