@@ -1,23 +1,12 @@
-The 'Screenshots' folder contains images of all the various windows/dialogs used in XBMC and are labelled the same as their relevant XML.
+Dattaraya
 
-To make use of the Debug Grid and Info add this to your Keymap.xml (or create a new one in the USERDATA/Keymaps folder)
+This is my first attempt at creating an XBMC skin.
+I always wanted to created the XBMC experience in my vision, and so here I am.
 
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<keymap>
-	<global>
-		<keyboard>
-			<F5>XBMC.ReloadSkin()</F5>
-			<F6>Skin.ToggleSetting(DebugGrid)</F6>
-			<F7>Skin.ToggleSetting(HideDebugInfo)</F7>
-			<F8>Notification(Testing 123,Hello world)</F8>
-		</keyboard>
-	</global>
-</keymap>
-
-F5 - Reload skin
-F6 - Show/Hide the Debug Grid
-F7 - Show/Hide the Debug Info
-F8 - Activates the KaiDialogToast.xml
+Principles:
++ Opinionated - I have firm beliefs about hiding certain options. This is a media center skin, not a productivity OS.
++ Simple
++ Cohesive - Everything from the navigation to the typography should feel like it belongs together.
++ Beautiful - Subjective, yes. I made the best attempts to use beautiful typefaces and iconography.
 
 
-Further window info can be found in the WIKI (http://wiki.xbmc.org/index.php?title=List_of_Built_In_Controls).
