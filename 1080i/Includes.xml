@@ -124,8 +124,8 @@
 	<include name="HomeMenu_MovieSubMenu">
 		<control type="group">
 			<orientation>horizontal</orientation>
-			<posx>450</posx>
-			<posy>80</posy>
+			<posx>690</posx>
+			<posy>155</posy>
 			<width>700</width>
 			<height>60</height>
 			<itemgap>20</itemgap>
