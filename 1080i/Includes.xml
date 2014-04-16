@@ -120,5 +120,31 @@
 		</control>
 
 	</include>
+	<!-- The submenu that offers some additional functions for doing stuff with movies -->
+	<include name="HomeMenu_MovieSubMenu">
+		<control type="group">
+			<orientation>horizontal</orientation>
+			<posx>450</posx>
+			<posy>80</posy>
+			<width>700</width>
+			<height>60</height>
+			<itemgap>20</itemgap>
+			<onleft>1</onleft>
+			<onright>1</onright>
+
+
+			<control type="label">
+				<visible>Container(300).HasFocus(1)</visible>
+				<label>ADD MOVIE SOURCE</label>
+				<width>440</width>
+				<height>60</height>
+				<textcolor>white</textcolor>
+				<font>Medium</font>
+				<posx>0</posx>
+				<posy>0</posy>
+
+			</control>
+		</control>
+	</include>
 
 </includes>

@@ -23,13 +23,13 @@
 
 		<font>
 			<name>Medium</name>
-			<filename>Gotham Thin.ttf</filename>
+			<filename>Gotham Book.ttf</filename>
 			<size>39</size>
 		</font>
 
 		<font>
 			<name>Small</name>
-			<filename>AvenirLTStd-Light.otf</filename>
+			<filename>Gotham Thin.ttf</filename>
 			<size>30</size>
 		</font>
 
