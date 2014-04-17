@@ -116,9 +116,17 @@
 		</control>
 
 	<!-- Display a "default music background" if the music library is empty. -->
-		<control type="image" description="movie default background">
+		<control type="image" description="music default background">
 			<texture>emptymusic.png</texture>
 			<visible>!Library.HasContent(Music) + Container(300).HasFocus(2)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
+
+		<!-- Display a "default music background" if the music library is empty. -->
+		<control type="image" description="photo default background">
+			<texture>emptyphoto.png</texture>
+			<visible>!Library.HasContent(Photos) + Container(300).HasFocus(3)</visible>
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<colordiffuse>FanartDiffuse</colordiffuse>
 		</control>
