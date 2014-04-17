@@ -72,7 +72,7 @@
 	     		<label>31006</label>
 	     		<icon>icons/popcorn.png</icon>
 	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
-
+	     		<onright>SetFocus(936,9361)</onright>
 	     	</item>
 
 	     	<item id="2">
@@ -91,8 +91,8 @@
 
 	     	<item id="4">
 	     		<description>Settings</description>
-	     		<label>13000</label>
-	     		<icon>icons/earphones.png</icon>
+	     		<label>[UPPERCASE]SETTINGS[/UPPERCASE]</label>
+	     		<icon>icons/settings.png</icon>
 	     		<onclick>ActivateWindow(Settings)</onclick>
 	     	</item>
 
