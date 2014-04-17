@@ -13,14 +13,14 @@
 			<description>Home Wraplist</description>
 			<posx>0</posx>
 			<posy>72</posy>
-			<width>680</width>
+			<width>880</width>
 			<height>190</height>
 			<onup>300</onup>
 			<ondown>300</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<setfocus></setfocus>
-			<focusposition>3</focusposition>
+			<focusposition>4</focusposition>
 			<scrolltime>200</scrolltime>
 			<autoscroll>false</autoscroll>
 
@@ -34,7 +34,7 @@
 	        	</control>
 
 	        	<control type="label">
-	        		<posx>250</posx>
+	        		<posx>260</posx>
 	        		<posy>47</posy>
 	        		<height>90</height>
 	        		<info>ListItem.Label</info>
@@ -54,7 +54,7 @@
 	        	</control>
 
 	        	<control type="label">
-	        		<posx>250</posx>
+	        		<posx>260</posx>
 	        		<posy>50</posy>
 	        		<height>90</height>
 	        		<info>ListItem.Label</info>
@@ -83,6 +83,13 @@
 	     	</item>
 
 	     	<item id="3">
+	     		<description>Photos</description>
+	     		<label>31005</label>
+	     		<icon>icons/pictures.png</icon>
+	     		<onclick>ActivateWindow(Pictures)</onclick>
+	     	</item>
+
+	     	<item id="4">
 	     		<description>Settings</description>
 	     		<label>13000</label>
 	     		<icon>icons/earphones.png</icon>
@@ -95,11 +102,26 @@
 	<!-- Background texture for the movie menu item control -->
 		<control type="image" description="movie fanart">
 		  <animation effect="fade" time="600">VisibleChange</animation>
-		  <visible>Container(300).HasFocus(1)</visible>
+		  <visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
 		  <texture background="true">$INFO[Window.Property(LatestMovie.2.Fanart)]</texture>
 		  <colordiffuse>FanartDiffuse</colordiffuse>
 		</control>
 
+	<!-- Display a "default movie background" if the movie library is empty. -->
+		<control type="image" description="movie default background">
+			<texture>emptymovie.png</texture>
+			<visible>!Library.HasContent(Movies) + Container(300).HasFocus(1)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
+
+	<!-- Display a "default music background" if the music library is empty. -->
+		<control type="image" description="movie default background">
+			<texture>emptymusic.png</texture>
+			<visible>!Library.HasContent(Music) + Container(300).HasFocus(2)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
 
 		<control type="rss">
 			<description>RSS Feed</description>
