@@ -131,7 +131,7 @@
 			<itemgap>20</itemgap>
 			<onleft>1</onleft>
 			<onright>1</onright>
-			<visible>Container(300).HasFocus(1)</visible>
+			<visible>Control.HasFocus(1)</visible>
 
 			<control type="label" id="9361">
 
