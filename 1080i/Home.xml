@@ -15,10 +15,10 @@
 			<posy>72</posy>
 			<width>880</width>
 			<height>190</height>
-			<onup>300</onup>
-			<ondown>300</ondown>
-			<onleft>300</onleft>
-			<onright>300</onright>
+			<onup>2</onup>
+			<ondown>3</ondown>
+			<onleft>1</onleft>
+			<onright>1</onright>
 			<setfocus></setfocus>
 			<focusposition>4</focusposition>
 			<scrolltime>200</scrolltime>
@@ -72,7 +72,7 @@
 	     		<label>31006</label>
 	     		<icon>icons/popcorn.png</icon>
 	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
-	     		<onright>SetFocus(936,9361)</onright>
+	     		<onright condition="Container(300).HasFocus(1)">SetFocus(936)</onright>
 	     	</item>
 
 	     	<item id="2">

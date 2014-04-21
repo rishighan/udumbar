@@ -130,11 +130,9 @@
 			<height>60</height>
 			<itemgap>20</itemgap>
 			<onleft>1</onleft>
-			<onright>1</onright>
-			<visible>Control.HasFocus(1)</visible>
+			<visible allowhiddenfocus="true">Container(300).HasFocus(1)</visible>
 
 			<control type="label" id="9361">
-
 				<label>ADD MOVIE SOURCE</label>
 				<width>440</width>
 				<height>60</height>
