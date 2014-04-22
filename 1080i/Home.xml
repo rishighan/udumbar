@@ -17,9 +17,9 @@
 			<height>190</height>
 			<onup>2</onup>
 			<ondown>3</ondown>
+			<viewtype>list</viewtype>
 			<onleft>1</onleft>
-			<onright>1</onright>
-			<setfocus></setfocus>
+			<onright>935</onright>
 			<focusposition>4</focusposition>
 			<scrolltime>200</scrolltime>
 			<autoscroll>false</autoscroll>
@@ -35,7 +35,7 @@
 
 	        	<control type="label">
 	        		<posx>260</posx>
-	        		<posy>47</posy>
+	        		<posy>50</posy>
 	        		<height>90</height>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
@@ -72,7 +72,7 @@
 	     		<label>31006</label>
 	     		<icon>icons/popcorn.png</icon>
 	     		<onclick>ActivateWindow(Video,movietitles)</onclick>
-	     		<onright condition="Container(300).HasFocus(1)">SetFocus(936)</onright>
+
 	     	</item>
 
 	     	<item id="2">
@@ -99,11 +99,24 @@
 	    </content>
 		</control>   <!-- end wraplist -->
 
+		<!-- Button control hack -->
+		<control type="button" id="935">
+			<label>-</label>
+			<posx>670</posx>
+			<posy>90</posy>
+			<width>0</width>
+			<height>0</height>
+			<font>Small</font>
+			<textcolor>white</textcolor>
+			<onleft>300</onleft>
+			<visible>Container(300).HasFocus(1)</visible>
+
+		</control>
 	<!-- Background texture for the movie menu item control -->
 		<control type="image" description="movie fanart">
 		  <animation effect="fade" time="600">VisibleChange</animation>
 		  <visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
-		  <texture background="true">$INFO[Window.Property(LatestMovie.2.Fanart)]</texture>
+		  <texture background="true">$INFO[Window.Property(LatestMovie.3.Fanart)]</texture>
 		  <colordiffuse>FanartDiffuse</colordiffuse>
 		</control>
 
