@@ -35,7 +35,7 @@
 
 	        	<control type="label">
 	        		<posx>260</posx>
-	        		<posy>50</posy>
+	        		<posy>47</posy>
 	        		<height>90</height>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
