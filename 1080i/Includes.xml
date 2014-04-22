@@ -122,59 +122,57 @@
 	</include>
 	<!-- The submenu that offers some additional functions for doing stuff with movies -->
 	<include name="HomeMenu_MovieSubMenu">
-		<control type="wraplist" id="936">
-			<posx>690</posx>
-			<posy>155</posy>
-			<width>700</width>
-			<height>60</height>
-			<focusposition>2</focusposition>
-			<onleft>935</onleft>
-			<onright>1</onright>
-			<onup>1</onup>
-			<ondown>2</ondown>
-			<visible allowhiddenfocus="true">Control.HasFocus(935)</visible>
+	<control type="wraplist" id="936">
+		<posx>690</posx>
+		<posy>90</posy>
+		<width>700</width>
+		<height>90</height>
+		<orientation>vertical</orientation>
+		<onup>2</onup>
+		<ondown>3</ondown>
+		<onright>1</onright>
+		<onleft>300</onleft>
+		<visible allowhiddenfocus="true">Control.HasFocus(936)</visible>
 
-			<itemlayout width="700" height="60">
+		<itemlayout width="700" height="90">
 			<control type="label">
 				<info>ListItem.Label</info>
-				<width>440</width>
-				<height>60</height>
+				<font>Small</font>
 				<textcolor>white</textcolor>
-				<font>Medium</font>
+				<width>700</width>
+				<height>90</height>
 				<posx>90</posx>
-				<posy>10</posy>
+	        		<posy>0</posy>
 			</control>
+		</itemlayout>
 
-			</itemlayout>
-			<focusedlayout width="700" height="60">
+		<focusedlayout width="700" height="90">
 			<control type="label">
 				<info>ListItem.Label</info>
-				<width>440</width>
-				<height>60</height>
-				<textcolor>white</textcolor>
 				<font>Medium</font>
+				<textcolor>white</textcolor>
+				<width>700</width>
+				<height>90</height>
 				<posx>90</posx>
-				<posy>10</posy>
+	        		<posy>0</posy>
 			</control>
+		</focusedlayout>
 
-			</focusedlayout>
-
-			<content>
-				<item id="1">
-					<label>ADD MOVIE SOURCE</label>
-					<font>Small</font>
-					<textcolor>white</textcolor>
-				</item>
-
-				<item id="2">
-					<label>BROWSE MOVIES</label>
-					<font>Small</font>
-					<textcolor>white</textcolor>
-				</item>
-			</content>
-
-
-		</control>
+		<content>
+			<item id="1">
+				<label>Add Movie source</label>
+				<font>Medium</font>
+				<textcolor>white</textcolor>
+				<onclick>ActivateWindow(Video,movietitles)</onclick>
+			</item>
+			<item id="2">
+				<label>Browse movies and stuff</label>
+				<font>small</font>
+				<textcolor>white</textcolor>
+				<onclick>ActivateWindow(Video,movietitles)</onclick>
+			</item>
+		</content>
+	</control>
 	</include>
 
 </includes>

@@ -19,7 +19,7 @@
 			<ondown>3</ondown>
 			<viewtype>list</viewtype>
 			<onleft>1</onleft>
-			<onright>935</onright>
+			<onright condition="Container(300).HasFocus(1)">SetFocus(936)</onright>
 			<focusposition>4</focusposition>
 			<scrolltime>200</scrolltime>
 			<autoscroll>false</autoscroll>
@@ -99,19 +99,7 @@
 	    </content>
 		</control>   <!-- end wraplist -->
 
-		<!-- Button control hack -->
-		<control type="button" id="935">
-			<label>-</label>
-			<posx>670</posx>
-			<posy>90</posy>
-			<width>0</width>
-			<height>0</height>
-			<font>Small</font>
-			<textcolor>white</textcolor>
-			<onleft>300</onleft>
-			<visible>Container(300).HasFocus(1)</visible>
 
-		</control>
 	<!-- Background texture for the movie menu item control -->
 		<control type="image" description="movie fanart">
 		  <animation effect="fade" time="600">VisibleChange</animation>
