@@ -114,14 +114,66 @@
 	</control>
 
 	<!-- Recently added. -->
-	<control type="image" id="937">
+	<control type="list" id="937">
 		<description>recently watched movies</description>
 		<posx>297</posx>
 		<posy>200</posy>
 		<width>200</width>
 		<height>500</height>
 		<visible>Container(300).HasFocus(1)</visible>
-		<info>$INFO[ListItem.Art(thumb)]</info>
+
+		<itemlayout>
+			<control type="image">
+				<description>The movie poster thumb</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>180</width>
+				<height>400</height>
+				<info>$INFO[ListItem.Art(thumb)]</info>
+			</control>
+
+			<control>
+				<description>The latest movie label</description>
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>30</height>
+				<font>small</font>
+				<textcolor>white</textcolor>
+				<info>$INFO[ListItem.Title]</info>
+			</control>
+
+		</itemlayout>
+
+		<focusedlayout>
+			<control type="image">
+				<description>The movie poster thumb</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>180</width>
+				<height>400</height>
+				<info>$INFO[ListItem.Art(thumb)]</info>
+			</control>
+
+			<control>
+				<description>The latest movie label</description>
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>600</width>
+				<height>30</height>
+				<font>small</font>
+				<textcolor>gray</textcolor>
+				<info>$INFO[ListItem.Title]</info>
+			</control>
+		</focusedlayout>
+
+		<content>
+			<item id="9371">
+				<label></label>
+				<onclick>ActivateWindow(Settings)</onclick>
+				<texture></texture>
+			</item>
+		</content>
 	</control>
 
 	<!-- Background texture for the movie menu item control -->
