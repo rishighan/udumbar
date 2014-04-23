@@ -33,6 +33,12 @@
 			<size>30</size>
 		</font>
 
+		<font>
+			<name>Subhead</name>
+			<filename>Gotham Book.ttf</filename>
+			<size>30</size>
+		</font>
+
 		<!-- Required for system -->
 		<font>
 			<name>font13</name>
