@@ -175,4 +175,81 @@
 	</control>
 	</include>
 
+	<!-- Displays the recently watched movies (x3) -->
+	<include name="HomeMenu_MovieRecentlyAdded">
+		<!-- Recently added. -->
+	<control type="label">
+		<posx>299</posx>
+        <posy>310</posy>
+		<font>small</font>
+		<textcolor>white</textcolor>
+		<label>RECENTLY ADDED:</label>
+		<visible>Container(300).HasFocus(1)</visible>
+	</control>
+    <control type="list" id="937">
+    	<visible>Container(300).HasFocus(1)</visible>
+        <description>recently watched movies</description>
+        <posx>299</posx>
+        <posy>200</posy>
+        <width>2000</width>
+        <height>500</height>
+        <visible>true</visible>
+        <orientation>horizontal</orientation>
+        <itemlayout width="210" height="500">
+            <control type="image">
+                <width>200</width>
+                <height>550</height>
+                <posx>0</posx>
+                <posy>40</posy>
+                <texture>$INFO[ListItem.Thumb]</texture>
+            </control>
+            <control type="label">
+            	<width>200</width>
+            	<height>30</height>
+                <posx>0</posx>
+                <posy>45</posy>
+                <font>Small</font>
+                <textcolor>white</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </itemlayout>
+
+        <focusedlayout width="210" height="500">
+            <control type="image">
+                <width>200</width>
+                <height>550</height>
+                <posx>0</posx>
+                <posy>40</posy>
+                <texture>$INFO[ListItem.Thumb]</texture>
+            </control>
+            <control type="label">
+            	<width>200</width>
+            	<height>30</height>
+                <posx>0</posx>
+                <posy>45</posy>
+                <font>Small</font>
+                <textcolor>white</textcolor>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+        </focusedlayout>
+
+
+        <content>
+            <item id="9371">
+                <thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
+                <onclick>-</onclick>
+            </item>
+            <item id="9372">
+                <thumb>$INFO[Window.Property(LatestMovie.4.Thumb)]</thumb>
+                <onclick>-</onclick>
+            </item>
+            <item id="9373">
+                <thumb>$INFO[Window.Property(LatestMovie.1.Thumb)]</thumb>
+                <onclick>-</onclick>
+            </item>
+
+        </content>
+
+    </control>
+	</include>
 </includes>
