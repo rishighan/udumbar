@@ -343,7 +343,7 @@
 			<height>50</height>
 			<font>small</font>
 			<textcolor>white</textcolor>
-			<label>$INFO[Window(Home).Property(RandomMovie.6.Plot)]</label>
+			<label>$ESCINFO[Window(Home).Property(RandomMovie.6.Plot)]</label>
 
 		</control>
 	</include>
