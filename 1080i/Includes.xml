@@ -224,7 +224,8 @@
 
 	<!-- Displays the recently watched movies (x3) -->
 	<include name="HomeMenu_MovieRecentlyAdded">
-		<!-- Recently added. -->
+
+	<!-- Recently added Label-->
 	<control type="label">
 		<posx>299</posx>
         <posy>330</posy>
@@ -235,11 +236,16 @@
 		<visible>Library.HasContent(Movies) + Container(300).HasFocus(1)</visible>
 		<animation effect="fade" time="600">VisibleChange</animation>
 	</control>
+
     <control type="fixedlist" id="937">
     	<visible>Container(300).HasFocus(1)</visible>
         <description>recently added movies</description>
         <posx>300</posx>
         <posy>200</posy>
+        <onup>300</onup>
+        <ondown>300</ondown>
+        <onright>300</onright>
+        <onleft>300</onleft>
         <width>900</width>
         <height>600</height>
         <visible>true</visible>
@@ -308,23 +314,37 @@
 
         <content>
             <item id="9371">
+                <thumb>$INFO[Window.Property(LatestMovie.7.Thumb)]</thumb>
+                <label>$INFO[Window.Property(LatestMovie.7.Rating)]</label>
+                <onclick>-</onclick>
+            </item>
+            <item id="9372">
                 <thumb>$INFO[Window.Property(LatestMovie.6.Thumb)]</thumb>
                 <label>$INFO[Window.Property(LatestMovie.6.Rating)]</label>
                 <onclick>-</onclick>
             </item>
-            <item id="9372">
+            <item id="9373">
                 <thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
                 <label>$INFO[Window.Property(LatestMovie.5.Rating)]</label>
-                <onclick>-</onclick>
-            </item>
-            <item id="9373">
-                <thumb>$INFO[Window.Property(LatestMovie.1.Thumb)]</thumb>
-                <label>$INFO[Window.Property(LatestMovie.1.Rating)]</label>
                 <onclick>-</onclick>
             </item>
 
         </content>
 
     </control>
+	</include>
+
+	<!-- Random or last watched Movie -->
+	<include name="HomeMenu_MovieRandom">
+		<control type="label">
+			<posx>20</posx>
+			<posy>30</posy>
+			<width>400</width>
+			<height>50</height>
+			<font>small</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[Window(Home).Property(RandomMovie.6.Plot)]</label>
+
+		</control>
 	</include>
 </includes>

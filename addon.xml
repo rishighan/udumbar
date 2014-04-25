@@ -6,6 +6,9 @@
 	provider-name="Hitcher">
 	<requires>
 		<import addon="xbmc.gui" version="3.00"/>
+		<!-- The widgets that allow several additional functions
+			 sourced from: http://forum.xbmc.org/showthread.php?tid=142389 -->
+		<import addon="service.skin.widgets" version="0.0.2"/>
 	</requires>
 	<extension
     point="xbmc.gui.skin"
@@ -17,7 +20,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary>Created by Hitcher / Textures courtesy of Jezz_X</summary>
-		<description>'Foundation' is a basic, fully functional XBMC skin designed to be used as a base for creating a new skin; or simply as a learning tool for the beginner.</description>
+		<summary>Udumbar - Frishi/Rishi Ghan's skin based on Hitcher's Foundation skin. Art sourced from The Noun Project</summary>
+		<description>Udumbar (fig tree) - This is my first attempt at creating an XBMC skin.I always wanted to created the XBMC experience in my vision, and so here I am.</description>
 	</extension>
 </addon>
