@@ -157,6 +157,14 @@
 			<animation effect="fade" time="600">VisibleChange</animation>
 			<colordiffuse>FanartDiffuse</colordiffuse>
 		</control>
+
+		<!-- Display a "default settings background" if Settings is focused. -->
+		<control type="image" description="settings default background">
+			<texture>settings.png</texture>
+			<visible>Container(300).HasFocus(4)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
     </include>
 
 	<!-- The submenu that offers some additional functions for doing stuff with movies -->
@@ -219,24 +227,24 @@
 		<!-- Recently added. -->
 	<control type="label">
 		<posx>299</posx>
-        <posy>320</posy>
+        <posy>330</posy>
 		<font>small</font>
 		<height>40</height>
 		<textcolor>white</textcolor>
 		<label>RECENTLY ADDED:</label>
-		<visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
-		<animation effect="fade" time="60000">VisibleChange</animation>
+		<visible>Library.HasContent(Movies) + Container(300).HasFocus(1)</visible>
+		<animation effect="fade" time="600">VisibleChange</animation>
 	</control>
-    <control type="list" id="937">
+    <control type="fixedlist" id="937">
     	<visible>Container(300).HasFocus(1)</visible>
-        <description>recently watched movies</description>
+        <description>recently added movies</description>
         <posx>300</posx>
         <posy>200</posy>
-        <width>2000</width>
-        <height>500</height>
+        <width>900</width>
+        <height>600</height>
         <visible>true</visible>
         <orientation>horizontal</orientation>
-        <animation effect="fade" time="1000">VisibleChange</animation>
+        <animation effect="fade" time="800">VisibleChange</animation>
         <itemlayout width="190" height="500">
             <control type="image">
                 <width>180</width>
@@ -245,11 +253,22 @@
                 <posy>40</posy>
                 <texture>$INFO[ListItem.Thumb]</texture>
             </control>
+
+            <control type="image">
+            	<description>star graphic before numerical rating</description>
+            	<posx>0</posx>
+            	<posy>440</posy>
+            	<width>35</width>
+            	<height>35</height>
+            	<texture>icons/star.png</texture>
+            </control>
+
             <control type="label">
-            	<width>200</width>
+            	<description>rating</description>
             	<height>30</height>
-                <posx>0</posx>
-                <posy>45</posy>
+            	<width>100</width>
+            	<posx>40</posx>
+                <posy>445</posy>
                 <font>Small</font>
                 <textcolor>white</textcolor>
                 <label>$INFO[ListItem.Label]</label>
@@ -264,11 +283,22 @@
                 <posy>40</posy>
                 <texture>$INFO[ListItem.Thumb]</texture>
             </control>
-            <control type="label">
-            	<width>200</width>
+
+             <control type="image">
+            	<description>star graphic before numerical rating</description>
+            	<posx>0</posx>
+            	<posy>440</posy>
+            	<width>35</width>
+            	<height>35</height>
+            	<texture>icons/star.png</texture>
+            </control>
+
+             <control type="label">
+            	<description>rating</description>
             	<height>30</height>
-                <posx>0</posx>
-                <posy>45</posy>
+            	<width>100</width>
+            	<posx>40</posx>
+                <posy>445</posy>
                 <font>Small</font>
                 <textcolor>white</textcolor>
                 <label>$INFO[ListItem.Label]</label>
@@ -278,15 +308,18 @@
 
         <content>
             <item id="9371">
-                <thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
+                <thumb>$INFO[Window.Property(LatestMovie.6.Thumb)]</thumb>
+                <label>$INFO[Window.Property(LatestMovie.6.Rating)]</label>
                 <onclick>-</onclick>
             </item>
             <item id="9372">
-                <thumb>$INFO[Window.Property(LatestMovie.4.Thumb)]</thumb>
+                <thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
+                <label>$INFO[Window.Property(LatestMovie.5.Rating)]</label>
                 <onclick>-</onclick>
             </item>
             <item id="9373">
                 <thumb>$INFO[Window.Property(LatestMovie.1.Thumb)]</thumb>
+                <label>$INFO[Window.Property(LatestMovie.1.Rating)]</label>
                 <onclick>-</onclick>
             </item>
 
