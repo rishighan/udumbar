@@ -120,6 +120,45 @@
 		</control>
 
 	</include>
+
+
+	<!-- Backgrounds: This include will change the backgrounds depending on what nav item is in focus
+		 and also if they satisfy the designated conditions -->
+    <include name="Home_BackgroundChange">
+
+	<!-- Background texture for the movie menu item control -->
+		<control type="image" description="movie fanart">
+		  <animation effect="fade" time="600">VisibleChange</animation>
+		  <visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
+		  <texture background="true">$INFO[Window.Property(LatestMovie.6.Fanart)]</texture>
+		  <colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
+
+	<!-- Display a "default movie background" if the movie library is empty. -->
+		<control type="image" description="movie default background">
+			<texture>emptymovie.png</texture>
+			<visible>!Library.HasContent(Movies) + Container(300).HasFocus(1)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
+
+	<!-- Display a "default music background" if the music library is empty. -->
+		<control type="image" description="music default background">
+			<texture>emptymusic.png</texture>
+			<visible>!Library.HasContent(Music) + Container(300).HasFocus(2)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
+
+		<!-- Display a "default music background" if the music library is empty. -->
+		<control type="image" description="photo default background">
+			<texture>emptyphoto.png</texture>
+			<visible>!Library.HasContent(Photos) + Container(300).HasFocus(3)</visible>
+			<animation effect="fade" time="600">VisibleChange</animation>
+			<colordiffuse>FanartDiffuse</colordiffuse>
+		</control>
+    </include>
+
 	<!-- The submenu that offers some additional functions for doing stuff with movies -->
 	<include name="HomeMenu_MovieSubMenu">
 	<control type="wraplist" id="936">
@@ -180,25 +219,28 @@
 		<!-- Recently added. -->
 	<control type="label">
 		<posx>299</posx>
-        <posy>310</posy>
+        <posy>320</posy>
 		<font>small</font>
+		<height>40</height>
 		<textcolor>white</textcolor>
 		<label>RECENTLY ADDED:</label>
-		<visible>Container(300).HasFocus(1)</visible>
+		<visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
+		<animation effect="fade" time="60000">VisibleChange</animation>
 	</control>
     <control type="list" id="937">
     	<visible>Container(300).HasFocus(1)</visible>
         <description>recently watched movies</description>
-        <posx>299</posx>
+        <posx>300</posx>
         <posy>200</posy>
         <width>2000</width>
         <height>500</height>
         <visible>true</visible>
         <orientation>horizontal</orientation>
-        <itemlayout width="210" height="500">
+        <animation effect="fade" time="1000">VisibleChange</animation>
+        <itemlayout width="190" height="500">
             <control type="image">
-                <width>200</width>
-                <height>550</height>
+                <width>180</width>
+                <height>530</height>
                 <posx>0</posx>
                 <posy>40</posy>
                 <texture>$INFO[ListItem.Thumb]</texture>
@@ -214,10 +256,10 @@
             </control>
         </itemlayout>
 
-        <focusedlayout width="210" height="500">
+        <focusedlayout width="190" height="500">
             <control type="image">
-                <width>200</width>
-                <height>550</height>
+                <width>180</width>
+                <height>530</height>
                 <posx>0</posx>
                 <posy>40</posy>
                 <texture>$INFO[ListItem.Thumb]</texture>

@@ -8,6 +8,9 @@
 
 		<include>GlobalBackground</include>
 		<include>HomeMenu_MovieSubMenu</include>
+		<include>Home_BackgroundChange</include>
+		<!-- Recently Added -->
+		<include>HomeMenu_MovieRecentlyAdded</include>
 
 		<control type="wraplist" id="300">
 			<description>Home Wraplist</description>
@@ -113,40 +116,8 @@
 		<label>$INFO[Window.Property(Movies.Count)] MOVIES IN YOUR LIBRARY</label>
 	</control>
 
-	<!-- Recently Added -->
-	<include>HomeMenu_MovieRecentlyAdded</include>
 
-	<!-- Background texture for the movie menu item control -->
-		<control type="image" description="movie fanart">
-		  <animation effect="fade" time="600">VisibleChange</animation>
-		  <visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
-		  <texture background="true">$INFO[Window.Property(LatestMovie.6.Fanart)]</texture>
-		  <colordiffuse>FanartDiffuse</colordiffuse>
-		</control>
 
-	<!-- Display a "default movie background" if the movie library is empty. -->
-		<control type="image" description="movie default background">
-			<texture>emptymovie.png</texture>
-			<visible>!Library.HasContent(Movies) + Container(300).HasFocus(1)</visible>
-			<animation effect="fade" time="600">VisibleChange</animation>
-			<colordiffuse>FanartDiffuse</colordiffuse>
-		</control>
-
-	<!-- Display a "default music background" if the music library is empty. -->
-		<control type="image" description="music default background">
-			<texture>emptymusic.png</texture>
-			<visible>!Library.HasContent(Music) + Container(300).HasFocus(2)</visible>
-			<animation effect="fade" time="600">VisibleChange</animation>
-			<colordiffuse>FanartDiffuse</colordiffuse>
-		</control>
-
-		<!-- Display a "default music background" if the music library is empty. -->
-		<control type="image" description="photo default background">
-			<texture>emptyphoto.png</texture>
-			<visible>!Library.HasContent(Photos) + Container(300).HasFocus(3)</visible>
-			<animation effect="fade" time="600">VisibleChange</animation>
-			<colordiffuse>FanartDiffuse</colordiffuse>
-		</control>
 
 		<control type="rss">
 			<description>RSS Feed</description>
