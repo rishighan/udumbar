@@ -9,7 +9,6 @@
 		<include>GlobalBackground</include>
 		<include>HomeMenu_MovieSubMenu</include>
 		<include>Home_BackgroundChange</include>
-		<!-- Recently Added -->
 		<include>HomeMenu_MovieRecentlyAdded</include>
 		<include>HomeMenu_MovieRandom</include>
 
@@ -118,8 +117,34 @@
 		<label>$INFO[Window.Property(Movies.Count)] MOVIES IN YOUR LIBRARY</label>
 	</control>
 
+	<!-- Random movie picked from the library -->
+	<control type="label">
+		<posx>999</posx>
+		<posy>305</posy>
+		<width>700</width>
+		<height>90</height>
+		<font>Small</font>
+		<textcolor>white</textcolor>
+		<visible>Container(300).HasFocus(1)</visible>
+		<animation effect="fade" time="600">VisibleChange</animation>
+		<label>TODAY'S RANDOM PICK:</label>
 
+	</control>
 
+	<control type="group" id="randomMovie">
+		<posx>999</posx>
+		<posy>340</posy>
+		<width>700</width>
+		<height>1200</height>
+
+		<control type="label">
+			<posx>0</posx>
+			<posy>10</posy>
+			<font>Small</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
+		</control>
+	</control>
 
 		<control type="rss">
 			<description>RSS Feed</description>
