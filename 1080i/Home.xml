@@ -11,6 +11,7 @@
 		<include>Home_BackgroundChange</include>
 		<include>HomeMenu_MovieRecentlyAdded</include>
 		<include>HomeMenu_MovieRandom</include>
+		<include>HomeMenu_MovieLastWatched</include>
 
 		<control type="wraplist" id="300">
 			<description>Home Wraplist</description>

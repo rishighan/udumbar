@@ -334,6 +334,19 @@
     </control>
 	</include>
 
+	<!-- Last Watched movie, if you did watch a movie. -->
+	<include name="HomeMenu_MovieLastWatched">
+		<control type="label">
+			<posx>0</posx>
+			<posy>10</posy>
+			<width>300</width>
+			<height>200</height>
+			<label>Last Watched: $INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+			<font>Small</font>
+			<textcolor>white</textcolor>
+		</control>
+	</include>
+
 	<!-- Random or last watched Movie -->
 	<include name="HomeMenu_MovieRandom">
 		<control type="group" id="randomMovie">
