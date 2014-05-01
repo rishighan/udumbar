@@ -181,7 +181,7 @@
 		<onleft>300</onleft>
 		<visible allowhiddenfocus="true">Control.HasFocus(936)</visible>
 
-		<itemlayout width="700" height="90">
+		<itemlayout width="700" height="0">
 			<control type="label">
 				<info>ListItem.Label</info>
 				<font>Small</font>
@@ -227,8 +227,8 @@
 
 	<!-- Recently added Label-->
 	<control type="label">
-		<posx>299</posx>
-        <posy>330</posy>
+		<posx>100</posx>
+        <posy>350</posy>
 		<font>small</font>
 		<height>40</height>
 		<textcolor>white</textcolor>
@@ -240,8 +240,8 @@
     <control type="fixedlist" id="937">
     	<visible>Container(300).HasFocus(1)</visible>
         <description>recently added movies</description>
-        <posx>300</posx>
-        <posy>200</posy>
+        <posx>100</posx>
+        <posy>237</posy>
         <onup>300</onup>
         <ondown>300</ondown>
         <onright>300</onright>
@@ -263,7 +263,7 @@
             <control type="image">
             	<description>star graphic before numerical rating</description>
             	<posx>0</posx>
-            	<posy>440</posy>
+            	<posy>450</posy>
             	<width>35</width>
             	<height>35</height>
             	<texture>icons/star.png</texture>
@@ -274,7 +274,7 @@
             	<height>30</height>
             	<width>100</width>
             	<posx>40</posx>
-                <posy>445</posy>
+                <posy>455</posy>
                 <font>Small</font>
                 <textcolor>white</textcolor>
                 <label>$INFO[ListItem.Label]</label>
@@ -293,7 +293,7 @@
              <control type="image">
             	<description>star graphic before numerical rating</description>
             	<posx>0</posx>
-            	<posy>440</posy>
+            	<posy>450</posy>
             	<width>35</width>
             	<height>35</height>
             	<texture>icons/star.png</texture>
@@ -304,7 +304,7 @@
             	<height>30</height>
             	<width>100</width>
             	<posx>40</posx>
-                <posy>445</posy>
+                <posy>455</posy>
                 <font>Small</font>
                 <textcolor>white</textcolor>
                 <label>$INFO[ListItem.Label]</label>
@@ -314,8 +314,8 @@
 
         <content>
             <item id="9371">
-                <thumb>$INFO[Window.Property(LatestMovie.3.Thumb)]</thumb>
-                <label>$INFO[Window.Property(LatestMovie.3.Rating)]</label>
+                <thumb>$INFO[Window.Property(LatestMovie.7.Thumb)]</thumb>
+                <label>$INFO[Window.Property(LatestMovie.7.Rating)]</label>
                 <onclick>-</onclick>
             </item>
             <item id="9372">
@@ -326,6 +326,11 @@
             <item id="9373">
                 <thumb>$INFO[Window.Property(LatestMovie.5.Thumb)]</thumb>
                 <label>$INFO[Window.Property(LatestMovie.5.Rating)]</label>
+                <onclick>-</onclick>
+            </item>
+             <item id="9374">
+                <thumb>$INFO[Window.Property(LatestMovie.4.Thumb)]</thumb>
+                <label>$INFO[Window.Property(LatestMovie.4.Rating)]</label>
                 <onclick>-</onclick>
             </item>
 
@@ -349,60 +354,84 @@
 
 	<!-- Random or last watched Movie -->
 	<include name="HomeMenu_MovieRandom">
-		<control type="group" id="randomMovie">
+	<!-- Random movie picked from the library -->
+	<control type="label">
 		<posx>999</posx>
-		<posy>340</posy>
+		<posy>325</posy>
 		<width>700</width>
-		<height>1200</height>
+		<height>90</height>
+		<font>Small</font>
+		<textcolor>white</textcolor>
 		<visible>Container(300).HasFocus(1)</visible>
-		<!-- movie title -->
-		<control type="label">
-			<posx>0</posx>
-			<posy>395</posy>
-			<font>Small</font>
-			<textcolor>white</textcolor>
-			<height>40</height>
-			<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
-		</control>
+		<animation effect="fade" time="600">VisibleChange</animation>
+		<label>TODAY'S RANDOM PICK:</label>
+
+	</control>
+	<control type="grouplist" id="938">
+		<posx>999</posx>
+		<posy>400</posy>
+		<width>700</width>
+		<height>auto</height>
+		<itemgap>0</itemgap>
+		<onup>300</onup>
+		<ondown>938</ondown>
+		<onleft>300</onleft>
+		<onright>300</onright>
+		<orientation>vetical</orientation>
+		<visible>Container(300).HasFocus(1)</visible>
 
 		<!-- movie art -->
 		<control type="image">
 			<posx>0</posx>
-			<posy>40</posy>
+			<posy>0</posy>
 			<texture>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</texture>
 			<width>650</width>
 			<height>350</height>
 		</control>
-		<!-- Rating -->
+		<!-- movie title -->
+		<control type="label">
+			<posx>0</posx>
+			<posy>10</posy>
+			<font>Small</font>
+			<textcolor>white</textcolor>
+			<height>35</height>
+			<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
+		</control>
+		<!-- tagline -->
+		<control type="textbox">
+			<posx>0</posx>
+			<posy>429</posy>
+			<width>700</width>
+			<height>30</height>
+			<font>XSmall</font>
+			<textcolor>white</textcolor>
+			<visible>!IsEmpty(Window(Home).Property(RandomMovie.1.Tagline))</visible>
+			<label>$INFO[Window(Home).Property(RandomMovie.1.Tagline)]</label>
+			<autoscroll>false</autoscroll>
+
+		</control>
+		<control type="group">
+			<width></width>
+			<height>40</height>
+
 		<control type="image">
             <description>star graphic before numerical rating</description>
             <posx>0</posx>
-            <posy>460</posy>
+            <posy>-7</posy>
             <width>35</width>
             <height>35</height>
             <texture>icons/star.png</texture>
         </control>
 
 		<control type="label">
-			<posx>45</posx>
-			<posy>445</posy>
+			<posx>40</posx>
+			<posy>-20</posy>
 			<font>Small</font>
 			<textcolor>white</textcolor>
 			<info>Window(Home).Property(RandomMovie.1.Rating)</info>
 		</control>
-
-		<!-- tagline -->
-		<control type="textbox">
-			<posx>0</posx>
-			<posy>429</posy>
-			<width>700</width>
-			<height>150</height>
-			<font>XSmall</font>
-			<textcolor>white</textcolor>
-			<label>$INFO[Window(Home).Property(RandomMovie.1.Tagline)]</label>
-			<autoscroll>false</autoscroll>
-
 		</control>
+
 
 	</control>
 	</include>

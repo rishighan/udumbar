@@ -118,19 +118,7 @@
 		<label>$INFO[Window.Property(Movies.Count)] MOVIES IN YOUR LIBRARY</label>
 	</control>
 
-	<!-- Random movie picked from the library -->
-	<control type="label">
-		<posx>999</posx>
-		<posy>305</posy>
-		<width>700</width>
-		<height>90</height>
-		<font>Small</font>
-		<textcolor>white</textcolor>
-		<visible>Container(300).HasFocus(1)</visible>
-		<animation effect="fade" time="600">VisibleChange</animation>
-		<label>TODAY'S RANDOM PICK:</label>
 
-	</control>
 
 
 
