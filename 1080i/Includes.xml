@@ -222,12 +222,12 @@
 	</control>
 	</include>
 
-	<!-- Displays the recently watched movies (x3) -->
+	<!-- Display the recently added movies to the library (x4) -->
 	<include name="HomeMenu_MovieRecentlyAdded">
 
 	<!-- Recently added Label-->
 	<control type="label">
-		<posx>100</posx>
+		<posx>98</posx>
         <posy>350</posy>
 		<font>small</font>
 		<height>40</height>
@@ -341,20 +341,33 @@
 
 	<!-- Last Watched movie, if you did watch a movie. -->
 	<include name="HomeMenu_MovieLastWatched">
+	<control type="group">
+		<visible>Container(300).HasFocus(1)</visible>
 		<control type="label">
-			<posx>0</posx>
-			<posy>10</posy>
+			<posx>100</posx>
+			<posy>775</posy>
 			<width>300</width>
-			<height>200</height>
-			<label>Last Watched: $INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+			<height>50</height>
+			<label>LAST WATCHED:</label>
 			<font>Small</font>
 			<textcolor>white</textcolor>
 		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>805</posy>
+			<width>300</width>
+			<height>50</height>
+			<label>asaasdasd</label>
+			<font>XSmall</font>
+			<textcolor>white</textcolor>
+		</control>
+
+	</control>
 	</include>
 
-	<!-- Random or last watched Movie -->
-	<include name="HomeMenu_MovieRandom">
 	<!-- Random movie picked from the library -->
+	<include name="HomeMenu_MovieRandom">
+
 	<control type="label">
 		<posx>999</posx>
 		<posy>325</posy>
@@ -385,8 +398,8 @@
 			<posx>0</posx>
 			<posy>0</posy>
 			<texture>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</texture>
-			<width>650</width>
-			<height>350</height>
+			<width>680</width>
+			<height>380</height>
 		</control>
 		<!-- movie title -->
 		<control type="label">
