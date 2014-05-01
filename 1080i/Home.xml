@@ -41,6 +41,7 @@
 	        		<posx>290</posx>
 	        		<posy>47</posy>
 	        		<height>90</height>
+	        		<width>600</width>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
 	        		<textcolor>white</textcolor>
@@ -61,6 +62,7 @@
 	        		<posx>290</posx>
 	        		<posy>50</posy>
 	        		<height>90</height>
+	        		<width>600</width>
 	        		<info>ListItem.Label</info>
 	        		<font>XLarge</font>
 	        		<selectedcolor>red</selectedcolor>
