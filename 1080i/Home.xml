@@ -67,11 +67,11 @@
 	        		<font>XLarge</font>
 	        		<selectedcolor>red</selectedcolor>
 	        		<align>left</align>
-
 	        	</control>
 
 	        </focusedlayout>
 
+	     <!-- Main Navigation -->
 	     <content>
 	     	<item id="1">
 	     		<description>Movies</description>
@@ -121,13 +121,10 @@
 	</control>
 
 
-
-
-
-		<control type="rss">
-			<description>RSS Feed</description>
-			<posx>0</posx>
-			<posy>1015</posy>
+	<control type="rss">
+		<description>RSS Feed</description>
+		<posx>0</posx>
+		<posy>1015</posy>
 			<width>1920</width>
 			<height>21</height>
 			<font>Thin</font>
