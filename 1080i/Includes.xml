@@ -387,6 +387,7 @@
 			<width>700</width>
 			<height>30</height>
 			<font>XSmall</font>
+			<visible>!IsEmpty(Container(939).ListItem(2).Label)</visible>
 			<label>$INFO[Container(939).ListItem(2).Label]</label>
 		</control>
 
