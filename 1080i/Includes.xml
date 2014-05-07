@@ -504,13 +504,13 @@
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
         </control>
-        
+
         <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
+            <posx>110</posx>
+            <posy>110</posy>
             <width>350</width>
             <height>350</height>
-            <texture>$INFO[ListItem.Thumb]</texture>
+            <texture>$INFO[ListItem.Icon]</texture>
         </control>
     </itemlayout>
 
@@ -524,18 +524,18 @@
         </control>
 
         <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
+            <posx>110</posx>
+            <posy>110</posy>
             <width>350</width>
             <height>350</height>
-            <texture>$INFO[ListItem.Thumb]</texture>
+            <texture>$INFO[ListItem.Icon]</texture>
         </control>
     </focusedlayout>
 
     <content>
         <item id="941">
-            <texture>$INFO[Window.Property(LatestAlbum.1.Thumb)]</texture>
-            <info>Window(Home).Property(RecentAlbum.1.Title)</info>
+            <texture>$INFO[Window(Home).Property(LatestAlbum.1.Thumb)]</texture>
+            <info>Window(Home).Property(LatestAlbum.1.Title)</info>
             <onclick>-</onclick>
          </item>
     </content>
