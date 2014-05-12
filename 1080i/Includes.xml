@@ -131,9 +131,18 @@
 		<control type="image" description="movie fanart">
 		  <animation effect="fade" time="600">VisibleChange</animation>
 		  <visible>Container(300).HasFocus(1) + Library.HasContent(Movies)</visible>
-		  <texture background="true">$INFO[Window.Property(LatestMovie.1.fanart)]</texture>
+		  <texture background="true">$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</texture>
 		  <colordiffuse>FanartDiffuse</colordiffuse>
 		</control>
+
+
+	<!-- Background texture for the music menu item control -->
+		<control type="image" description="Latest music album fanart">
+		  <animation effect="fade" time="600">VisibleChange</animation>
+		  <visible>Container(300).HasFocus(2) + Library.HasContent(Music)</visible>
+		  <texture background="true">$INFO[Window.Property(RandomSong.1.Fanart)]</texture>
+		  <colordiffuse>FanartDiffuse</colordiffuse>
+		</control>	
 
 	<!-- Display a "default movie background" if the movie library is empty. -->
 		<control type="image" description="movie default background">
@@ -486,7 +495,20 @@
 	</control>
 	</include>
 
+<!-- Recently added albums x 4) -->
 <include name="HomeMenu_MusicRecentlyAdded">
+<!-- Recently added Label-->
+<control type="label">
+	<posx>98</posx>
+     <posy>350</posy>
+	<font>small</font>
+	<height>40</height>
+	<textcolor>white</textcolor>
+	<label>RECENTLY ADDED:</label>
+	<visible>Library.HasContent(Music) + Container(300).HasFocus(2)</visible>
+	<animation effect="fade" time="600">VisibleChange</animation>
+</control>
+
 <control type="fixedlist" id="940">
     <posx>90</posx>
     <posy>237</posy>
@@ -494,48 +516,66 @@
     <ondown>300</ondown>
     <onright>300</onright>
     <onleft>300</onleft>
-    <width>900</width>
+    <width>1000</width>
     <height>600</height>
     <allowoverlay>false</allowoverlay>
     <orientation>horizontal</orientation>
     <visible>Container(300).HasFocus(2) + Library.HasContent(Music)</visible>
 
-    <itemlayout width="300" height="350">
+    <itemlayout width="250" height="350">
         <control type="image">
-            <posx>0</posx>
-            <posy>30</posy>
+            <posx>5</posx>
+            <posy>164</posy>
             <width>250</width>
             <height>250</height>
             <texture>$INFO[ListItem.Thumb]</texture>
         </control>
 
          <control type="label">
-            <posx>0</posx>
-            <posy>0</posy>
+            <posx>10</posx>
+            <posy>410</posy>
             <font>Small</font>
             <height>50</height>
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
         </control>
+
+        <control type="label">
+            <posx>10</posx>
+            <posy>490</posy>
+            <font>XSmall</font>
+            <height>50</height>
+            <textcolor>white</textcolor>
+            <info>ListItem.Label2</info>
+        </control>
     </itemlayout>
 
-    <focusedlayout width="300" height="350">
+    <focusedlayout width="250" height="350">
 
     	<control type="image">
-            <posx>0</posx>
-            <posy>30</posy>
+            <posx>5</posx>
+            <posy>164</posy>
             <width>250</width>
             <height>250</height>
             <texture>$INFO[ListItem.Thumb]</texture>
         </control>
 
         <control type="label">
-            <posx>0</posx>
-            <posy>0</posy>
+            <posx>10</posx>
+            <posy>410</posy>
             <height>50</height>
             <font>Small</font>
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
+        </control>
+
+        <control type="label">
+            <posx>10</posx>
+            <posy>490</posy>
+            <font>XSmall</font>
+            <height>50</height>
+            <textcolor>white</textcolor>
+            <info>ListItem.Label2</info>
         </control>
 
         
@@ -543,14 +583,32 @@
 
     <content>
         <item id="941">
-            <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
-            <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
+         
+            <thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
+            <label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
+            <label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
+            
+            <onclick>-</onclick>
+         </item>
+
+         <item id="942">
+            <thumb>$INFO[Window.Property(LatestAlbum.3.Thumb)]</thumb>
+            <label>$INFO[Window.Property(RecentAlbum.3.Artist)]</label>
+            <label>$INFO[Window.Property(RecentAlbum.3.Title)]</label>
             <onclick>-</onclick>
          </item>
 
          <item id="942">
             <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
+            <label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
             <thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
+            <onclick>-</onclick>
+         </item>
+
+         <item id="942">
+            <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
+            <label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
+            <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
             <onclick>-</onclick>
          </item>
 
