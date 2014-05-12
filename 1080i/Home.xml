@@ -13,7 +13,9 @@
 		<include>HomeMenu_MovieRandom</include>
 		<include>HomeMenu_MovieLastWatched</include>
 
+
 		<!-- MUSIC -->
+		<include>HomeMenu_MusicLibraryCount</include>
 		<include>HomeMenu_MusicRecentlyAdded</include>
 
 		<control type="wraplist" id="300">

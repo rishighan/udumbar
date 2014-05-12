@@ -542,7 +542,7 @@
 
         <control type="label">
             <posx>10</posx>
-            <posy>490</posy>
+            <posy>40</posy>
             <font>XSmall</font>
             <height>50</height>
             <textcolor>white</textcolor>
@@ -571,7 +571,7 @@
 
         <control type="label">
             <posx>10</posx>
-            <posy>490</posy>
+            <posy>40</posy>
             <font>XSmall</font>
             <height>50</height>
             <textcolor>white</textcolor>
@@ -583,7 +583,6 @@
 
     <content>
         <item id="941">
-         
             <thumb>$INFO[Window.Property(LatestAlbum.4.Thumb)]</thumb>
             <label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
             <label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
@@ -598,23 +597,37 @@
             <onclick>-</onclick>
          </item>
 
-         <item id="942">
-            <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
-            <label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
+         <item id="943">
             <thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
+            <label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
+            <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
             <onclick>-</onclick>
          </item>
 
-         <item id="942">
-            <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
-            <label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
+         <item id="944">
             <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
+            <label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
+            <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
             <onclick>-</onclick>
          </item>
-
-        
-        
-    </content>
+   </content>
 </control>
 </include>
+
+<include name="HomeMenu_MusicLibraryCount">
+<!-- Album and song Count  -->
+	<control type="label">
+		<description>Show count of the total albums and songs in the Library</description>
+		<posx>299</posx>
+		<posy>200</posy>
+		<width>700</width>
+		<height>90</height>
+		<font>Subhead</font>
+		<textcolor>white</textcolor>
+		<visible>Container(300).HasFocus(2)</visible>
+		<animation effect="fade" time="600">VisibleChange</animation>
+		<label>$INFO[Window.Property(Music.AlbumsCount)] ALBUMS, $INFO[Window.Property(Music.SongsCount)] SONGS IN YOUR LIBRARY</label>
+	</control>
+</include>
+
 </includes>
