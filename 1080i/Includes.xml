@@ -487,62 +487,70 @@
 	</include>
 
 <include name="HomeMenu_MusicRecentlyAdded">
-<control type="list" id="940">
-    <posx>0</posx>
-    <posy>0</posy>
-    <width>500</width>
-    <height>400</height>
+<control type="fixedlist" id="940">
+    <posx>90</posx>
+    <posy>237</posy>
+    <onup>300</onup>
+    <ondown>300</ondown>
+    <onright>300</onright>
+    <onleft>300</onleft>
+    <width>900</width>
+    <height>600</height>
     <allowoverlay>false</allowoverlay>
-    <orientation>vertical</orientation>
-    <visible>Container(300).HasFocus(2)</visible>
+    <orientation>horizontal</orientation>
+    <visible>Container(300).HasFocus(2) + Library.HasContent(Music)</visible>
 
-    <itemlayout width="900" height="350">
-        <control type="label">
+    <itemlayout width="300" height="350">
+        <control type="image">
             <posx>0</posx>
-            <posy>20</posy>
+            <posy>30</posy>
+            <width>250</width>
+            <height>250</height>
+            <texture>$INFO[ListItem.Thumb]</texture>
+        </control>
+
+         <control type="label">
+            <posx>0</posx>
+            <posy>0</posy>
             <font>Small</font>
             <height>50</height>
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
-        </control>
-
-        <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>350</width>
-            <height>350</height>
-            <texture>$INFO[ListItem.Thumb]</texture>
         </control>
     </itemlayout>
 
-    <focusedlayout width="900" height="350">
+    <focusedlayout width="300" height="350">
+
+    	<control type="image">
+            <posx>0</posx>
+            <posy>30</posy>
+            <width>250</width>
+            <height>250</height>
+            <texture>$INFO[ListItem.Thumb]</texture>
+        </control>
+
         <control type="label">
             <posx>0</posx>
-            <posy>20</posy>
+            <posy>0</posy>
             <height>50</height>
             <font>Small</font>
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
         </control>
 
-        <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>350</width>
-            <height>350</height>
-            <texture>$INFO[ListItem.Thumb]</texture>
-        </control>
+        
     </focusedlayout>
 
     <content>
         <item id="941">
-            <info>Window(Home).Property(RecentAlbum.1.Title)</info>
-            <thumb>$INFO[Window.Property(RandomMovie.1.fanart)]</thumb>
+            <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
+            <thumb>$INFO[Window.Property(LatestAlbum.1.Thumb)]</thumb>
             <onclick>-</onclick>
          </item>
-           <item id="942">
-            <info>Window(Home).Property(RecentAlbum.2.Title)</info>
-            <texture>$INFO[Window.Property(LatestAlbum.2.Thumb)]</texture>
+
+         <item id="942">
+            <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
+            <thumb>$INFO[Window.Property(LatestAlbum.2.Thumb)]</thumb>
             <onclick>-</onclick>
          </item>
 
