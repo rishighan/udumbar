@@ -616,6 +616,7 @@
 
 <include name="HomeMenu_MusicLibraryCount">
 <!-- Album and song Count  -->
+<!-- TODO: how to handle count when not available -->
 	<control type="label">
 		<description>Show count of the total albums and songs in the Library</description>
 		<posx>299</posx>
