@@ -493,51 +493,61 @@
     <width>500</width>
     <height>400</height>
     <allowoverlay>false</allowoverlay>
-    <orientation>horizontal</orientation>
+    <orientation>vertical</orientation>
     <visible>Container(300).HasFocus(2)</visible>
 
     <itemlayout width="900" height="350">
         <control type="label">
             <posx>0</posx>
-            <posy>0</posy>
+            <posy>20</posy>
             <font>Small</font>
+            <height>50</height>
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
         </control>
 
         <control type="image">
-            <posx>110</posx>
-            <posy>110</posy>
+            <posx>0</posx>
+            <posy>0</posy>
             <width>350</width>
             <height>350</height>
-            <texture>$INFO[ListItem.Icon]</texture>
+            <texture>$INFO[ListItem.Thumb]</texture>
         </control>
     </itemlayout>
 
     <focusedlayout width="900" height="350">
         <control type="label">
             <posx>0</posx>
-            <posy>0</posy>
+            <posy>20</posy>
+            <height>50</height>
             <font>Small</font>
             <textcolor>white</textcolor>
             <info>ListItem.Label</info>
         </control>
 
         <control type="image">
-            <posx>110</posx>
-            <posy>110</posy>
+            <posx>0</posx>
+            <posy>0</posy>
             <width>350</width>
             <height>350</height>
-            <texture>$INFO[ListItem.Icon]</texture>
+            <texture>$INFO[ListItem.Thumb]</texture>
         </control>
     </focusedlayout>
 
     <content>
         <item id="941">
-            <texture>$INFO[Window(Home).Property(LatestAlbum.1.Thumb)]</texture>
-            <info>Window(Home).Property(LatestAlbum.1.Title)</info>
+            <info>Window(Home).Property(RecentAlbum.1.Title)</info>
+            <thumb>$INFO[Window.Property(RandomMovie.1.fanart)]</thumb>
             <onclick>-</onclick>
          </item>
+           <item id="942">
+            <info>Window(Home).Property(RecentAlbum.2.Title)</info>
+            <texture>$INFO[Window.Property(LatestAlbum.2.Thumb)]</texture>
+            <onclick>-</onclick>
+         </item>
+
+        
+        
     </content>
 </control>
 </include>
